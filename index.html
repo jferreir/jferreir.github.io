@@ -1,1 +1,22 @@
-Hello World
+<html>
+  <head>
+    <script src='https://cdn.rvmplayer.org/player/rvmplayer.cpc6128.0.1.1.min.js'></script>
+  </head>
+
+  <body>
+    <div class='container' style='position: relative; width: 800px; height: 600px;'></div>
+    <script>
+      const c=document.querySelector('.container')
+      //Load a Amstrad CPC game and warp 20 seconds
+      rvmPlayer_cpc6128(c,{
+        disk: {
+          type: 'dsk',
+          url: './betiled.dsk',
+        },
+        command: 'run"betiled.bas\n',
+        warpFrames: 20*50
+      })
+    </script>
+  </body>
+
+</html>
